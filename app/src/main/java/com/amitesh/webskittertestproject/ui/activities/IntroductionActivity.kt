@@ -1,6 +1,7 @@
 package com.amitesh.webskittertestproject.ui.activities
 
 import android.os.Bundle
+import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -27,8 +28,7 @@ class IntroductionActivity : AppCompatActivity() {
         private lateinit var binding :ActivityIntroductionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_introduction)
-        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        this.supportActionBar?.hide()
         binding = DataBindingUtil.setContentView(this,R.layout.activity_introduction)
         binding.lifecycleOwner = this
         checkSkipped()
