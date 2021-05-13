@@ -87,7 +87,7 @@ class AlbumFragment : Fragment() {
 
     private fun loadData(album: Album?) {
         album?.run {
-            viewModel.photoList.addAll(album.take(100))
+            viewModel.photoList.addAll(album.take(20))
             viewModel.albumAdapter.setData(viewModel.photoList)
             binding.progressBar.visibility = View.GONE
         }
