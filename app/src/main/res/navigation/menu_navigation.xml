@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_navigation"
+    app:startDestination="@id/albumFragment">
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.amitesh.webskittertestproject.ui.fragment.album.AlbumFragment"
+        android:label="AlbumFragment" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.amitesh.webskittertestproject.ui.fragment.user.UserFragment"
+        android:label="UserFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.amitesh.webskittertestproject.ui.fragment.map.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.amitesh.webskittertestproject.ui.fragment.user_list.UserListFragment"
+        android:label="UserListFragment" >
+        <action
+            android:id="@+id/action_userListFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+
+</navigation>
